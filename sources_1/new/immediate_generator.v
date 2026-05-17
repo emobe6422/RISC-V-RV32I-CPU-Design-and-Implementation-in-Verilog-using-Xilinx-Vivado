@@ -14,9 +14,6 @@ module immediate_generator(
         S_immediate = { {20{instruction[31]}}, instruction[31:25], instruction[11:7] };
         B_immediate = { {20{instruction[31]}}, instruction[7], instruction[30:25], instruction[11:8], 1'b0};
         U_immediate = { instruction[31:12], 12'b0 };
-        J_immediate = { {11{instruction[31]}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'b0};   
-        //REMOVE LATER    
-         $display("IMM_GEN: instruction=%h bits[31:20]=%b bits[11:7]=%b", 
-              instruction, instruction[31:20], instruction[11:7]);
+        J_immediate = { {11{instruction[31]}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'b0};
     end   
 endmodule
